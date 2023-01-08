@@ -1,0 +1,299 @@
+Here are the some testcase which can be used:
+
+Routes:
+
+1. fifa/api/v1/statistics
+   a. /get-all-details - Get all player statistics in single JSON array
+   eg. [
+    {
+        "id": 1,
+        "player": "Aaron Mooy",
+        "position": "MF",
+        "team": "Australia",
+        "age": "32-087",
+        "club": "Celtic",
+        "birth_year": 1990,
+        "games": 4,
+        "games_starts": 4,
+        "minutes": 360,
+        "minutes_90s": 4.0,
+        "goals": 0,
+        "assists": 0,
+        "goals_pens": 0,
+        "pens_made": 0,
+        "pens_att": 0,
+        "cards_yellow": 1,
+        "cards_red": 0,
+        "goals_per90": 0.0,
+        "assists_per90": 0.0,
+        "goals_assists_per90": 0.0,
+        "goals_pens_per90": 0.0,
+        "goals_assists_pens_per90": 0.0,
+        "xg": 0.0,
+        "npxg": 0.0,
+        "xg_assist": 0.1,
+        "npxg_xg_assist": 0.1,
+        "xg_per90": 0.01,
+        "xg_assist_per90": 0.02,
+        "xg_xg_assist_per90": 0.03,
+        "npxg_per90": 0.01,
+        "npxg_xg_assist_per90": 0.03
+    },
+    {
+        "id": 2,
+        "player": "Aaron Ramsey",
+        "position": "MF",
+        "team": "Wales",
+        "age": "31-350",
+        "club": "Nice",
+        "birth_year": 1990,
+        "games": 3,
+        "games_starts": 3,
+        "minutes": 266,
+        "minutes_90s": 3.0,
+        "goals": 0,
+        "assists": 0,
+        "goals_pens": 0,
+        "pens_made": 0,
+        "pens_att": 0,
+        "cards_yellow": 1,
+        "cards_red": 0,
+        "goals_per90": 0.0,
+        "assists_per90": 0.0,
+        "goals_assists_per90": 0.0,
+        "goals_pens_per90": 0.0,
+        "goals_assists_pens_per90": 0.0,
+        "xg": 0.0,
+        "npxg": 0.0,
+        "xg_assist": 0.0,
+        "npxg_xg_assist": 0.1,
+        "xg_per90": 0.01,
+        "xg_assist_per90": 0.01,
+        "xg_xg_assist_per90": 0.02,
+        "npxg_per90": 0.01,
+        "npxg_xg_assist_per90": 0.02
+    }]
+
+
+  b. /get-by-id - GET player stats by id
+  eg. /get-by-id/1
+  {
+    "id": 1,
+    "player": "Aaron Mooy",
+    "position": "MF",
+    "team": "Australia",
+    "age": "32-087",
+    "club": "Celtic",
+    "birth_year": 1990,
+    "games": 4,
+    "games_starts": 4,
+    "minutes": 360,
+    "minutes_90s": 4.0,
+    "goals": 0,
+    "assists": 0,
+    "goals_pens": 0,
+    "pens_made": 0,
+    "pens_att": 0,
+    "cards_yellow": 1,
+    "cards_red": 0,
+    "goals_per90": 0.0,
+    "assists_per90": 0.0,
+    "goals_assists_per90": 0.0,
+    "goals_pens_per90": 0.0,
+    "goals_assists_pens_per90": 0.0,
+    "xg": 0.0,
+    "npxg": 0.0,
+    "xg_assist": 0.1,
+    "npxg_xg_assist": 0.1,
+    "xg_per90": 0.01,
+    "xg_assist_per90": 0.02,
+    "xg_xg_assist_per90": 0.03,
+    "npxg_per90": 0.01,
+    "npxg_xg_assist_per90": 0.03
+}
+
+c. /apply-filter - GET players statistics array with some filters
+eg. /apply-filter?gamesPlayed=5&minutesPlayed=451&goals=0&yearOfBirth=1998
+[
+    {
+        "id": 16,
+        "player": "Achraf Hakimi",
+        "position": "DF",
+        "team": "Morocco",
+        "age": "24-037",
+        "club": "Paris S-G",
+        "birth_year": 1998,
+        "games": 5,
+        "games_starts": 5,
+        "minutes": 451,
+        "minutes_90s": 5.0,
+        "goals": 0,
+        "assists": 1,
+        "goals_pens": 0,
+        "pens_made": 0,
+        "pens_att": 0,
+        "cards_yellow": 0,
+        "cards_red": 0,
+        "goals_per90": 0.0,
+        "assists_per90": 0.2,
+        "goals_assists_per90": 0.2,
+        "goals_pens_per90": 0.0,
+        "goals_assists_pens_per90": 0.2,
+        "xg": 0.1,
+        "npxg": 0.1,
+        "xg_assist": 0.3,
+        "npxg_xg_assist": 0.4,
+        "xg_per90": 0.02,
+        "xg_assist_per90": 0.07,
+        "xg_xg_assist_per90": 0.09,
+        "npxg_per90": 0.02,
+        "npxg_xg_assist_per90": 0.09
+    }
+]
+
+
+1. fifa/api/v1/defense
+   a. /get-all-details - Get all player defense data in single JSON array
+   eg. 
+   [
+    {
+        "id": 1,
+        "player": "Aaron Mooy",
+        "position": "MF",
+        "team": "Australia",
+        "age": "32-087",
+        "birth_year": 1990,
+        "minutes_90s": 4.0,
+        "tackles": 9,
+        "tackles_won": 6,
+        "tackles_def_3rd": 4,
+        "tackles_mid_3rd": 4,
+        "tackles_att_3rd": 1,
+        "dribble_tackles": 6,
+        "dribbles_vs": 8,
+        "dribble_tackles_pct": 75.0,
+        "dribbled_past": 2,
+        "blocks": 6,
+        "blocked_shots": 4,
+        "blocked_passes": 2,
+        "tackles_Integererceptions": null,
+        "clearances": 9,
+        "errors": 0,
+        "integererceptions": null
+    },
+    {
+        "id": 2,
+        "player": "Aaron Ramsey",
+        "position": "MF",
+        "team": "Wales",
+        "age": "31-350",
+        "birth_year": 1990,
+        "minutes_90s": 3.0,
+        "tackles": 2,
+        "tackles_won": 0,
+        "tackles_def_3rd": 0,
+        "tackles_mid_3rd": 2,
+        "tackles_att_3rd": 0,
+        "dribble_tackles": 0,
+        "dribbles_vs": 2,
+        "dribble_tackles_pct": 0.0,
+        "dribbled_past": 2,
+        "blocks": 4,
+        "blocked_shots": 1,
+        "blocked_passes": 3,
+        "tackles_Integererceptions": null,
+        "clearances": 2,
+        "errors": 1,
+        "integererceptions": null
+    }
+        ]
+
+
+  b. /get-by-id - GET player defense data by id
+  eg. /get-by-id/4
+  {
+    "id": 4,
+    "player": "Abdelkarim Hassan",
+    "position": "DF",
+    "team": "Qatar",
+    "age": "29-105",
+    "birth_year": 1993,
+    "minutes_90s": 3.0,
+    "tackles": 7,
+    "tackles_won": 3,
+    "tackles_def_3rd": 5,
+    "tackles_mid_3rd": 2,
+    "tackles_att_3rd": 0,
+    "dribble_tackles": 3,
+    "dribbles_vs": 4,
+    "dribble_tackles_pct": 75.0,
+    "dribbled_past": 1,
+    "blocks": 3,
+    "blocked_shots": 1,
+    "blocked_passes": 2,
+    "tackles_Integererceptions": null,
+    "clearances": 5,
+    "errors": 0,
+    "integererceptions": null
+   }
+
+    c. /apply-filter - GET players statistics array with some filters
+    eg. apply-filter?team=France&position=GK&tackles=0&tacklesWon=0
+    [
+        {
+            "id": 256,
+            "player": "Hugo Lloris",
+            "position": "GK",
+            "team": "France",
+            "age": "35-350",
+            "birth_year": 1986,
+            "minutes_90s": 4.0,
+            "tackles": 0,
+            "tackles_won": 0,
+            "tackles_def_3rd": 0,
+            "tackles_mid_3rd": 0,
+            "tackles_att_3rd": 0,
+            "dribble_tackles": 0,
+            "dribbles_vs": 0,
+            "dribble_tackles_pct": null,
+            "dribbled_past": 0,
+            "blocks": 0,
+            "blocked_shots": 0,
+            "blocked_passes": 0,
+            "tackles_Integererceptions": null,
+            "clearances": 1,
+            "errors": 0,
+            "integererceptions": null
+        },
+        {
+            "id": 592,
+            "player": "Steve Mandanda",
+            "position": "GK",
+            "team": "France",
+            "age": "37-258",
+            "birth_year": 1985,
+            "minutes_90s": 1.0,
+            "tackles": 0,
+            "tackles_won": 0,
+            "tackles_def_3rd": 0,
+            "tackles_mid_3rd": 0,
+            "tackles_att_3rd": 0,
+            "dribble_tackles": 0,
+            "dribbles_vs": 0,
+            "dribble_tackles_pct": null,
+            "dribbled_past": 0,
+            "blocks": 0,
+            "blocked_shots": 0,
+            "blocked_passes": 0,
+            "tackles_Integererceptions": null,
+            "clearances": 0,
+            "errors": 0,
+            "integererceptions": null
+        }
+    ]
+
+
+
+Bonus Question - Apart from the specified technology, which technology can be used to achieve the same and can be much easier to implement.
+               - Node js can be used to make backend API's. Express module is easiest. And in javascript we have object data type which make our work even simpler, we can directly make objects without even defining class first.
+
